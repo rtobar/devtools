@@ -3,6 +3,12 @@
 * Bugfix for installing from git remote and not passing git2r credentials
   (@james-atkins, #1498)
 * Bugfix for installation of dependencies of dependencies (@jimhester, #1409).
+* Added a `submodules` option to `install_git` to download the submodules if there
+  is a `.gitmodules` in the repository. Updated the documentation for `install_github()`
+  to reflect this option. (@jonkeane, #1163, #751)
+
+* Handle case when a GitHub request returns a non-JSON error response.
+  (@jimhester, #1204, #1211)
 
 * `RCMD()`, `clean_source()`, `eval_clean()` and `evalq_clean()` have been
   removed. These functions never worked terribly well, and have been replaced 

@@ -5,7 +5,7 @@
 \title{Install a package from a git repository}
 \usage{
 install_git(url, subdir = NULL, branch = NULL, credentials = NULL,
-  quiet = FALSE, ...)
+  submodules = FALSE, quiet = FALSE, ...)
 }
 \arguments{
 \item{url}{Location of package. The url should point to a public or
@@ -20,6 +20,8 @@ contain the package we are interested in installing.}
 to \code{\link[git2r]{clone}}.}
 
 \item{quiet}{if \code{TRUE} suppresses output from this function.}
+
+\item{submodules}{if \code{TRUE} download submodules before installing.}
 
 \item{...}{passed on to \code{\link{install}}}
 }
